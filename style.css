@@ -1,0 +1,150 @@
+body {
+  background: #ecf2f8;
+}
+.main {
+  font-family: "Barlow Semi Condensed";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 138.462% */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container {
+  max-width: 100%;
+  height: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 1rem;
+  margin: 2rem 5rem 1rem;
+}
+
+.grid-element {
+  border-radius: 1rem;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+  padding: 2rem;
+}
+
+#grid1 {
+  background: #733fc8;
+  grid-row: 1 / 4;
+  grid-column: 1 / 3;
+  position: relative;
+}
+
+#grid2 {
+  background: #48556a;
+  grid-row: 1 / 4;
+  grid-column: 3 / 4;
+}
+
+#grid5 {
+  background: #fff;
+  grid-row: 1 / 7;
+  grid-column: 4 / 5;
+}
+#grid3 {
+  background: #fff;
+  grid-row: 4 / 7;
+  grid-column: 1 / 2;
+}
+
+#grid4 {
+  background: #19202d;
+  grid-row: 4 / 7;
+  grid-column: 2 / 4;
+}
+
+.introduction {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.grid-element .introduction .image > img {
+    width: 3rem;
+  border-radius: 99px;
+}
+
+#grid1 .image > img, #grid4 .image > img {
+    border: 0.2rem solid #A775F1;
+}
+
+#grid3 .introduction .text .name , #grid5 .introduction .text .name {
+    color: #48556A;
+}
+
+#grid3 .introduction .text .graduate , #grid5 .introduction .text .graduate {
+    color: #48556A;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+  color: #fff;
+  font-size: 13px;
+  line-height: 13px; /* 100% */
+  margin: 0;
+}
+
+.grid#grid3, #grid5.name {
+    color: #48556A;
+}
+.graduate { 
+  color: #fff;
+  font-size: 11px;
+  line-height: 11px; /* 100% */
+  opacity: 0.5;
+  margin-top: 10px;
+}
+
+/* Media query for screen widths less than 1000px */
+@media screen and (max-width: 800px) {
+    .grid-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .grid-element {
+      width: 100%;
+    }
+}
+  
+h1 {
+    line-height: 120%;
+}  
+
+#grid1 .description > h1, #grid2 .description > h1, #grid4 .description > h1 {
+    color: #FFF;
+}
+
+.feedback {
+    color: #CFCFCF;
+    opacity: 0.7;
+}
+
+#grid3 .description > p, #grid5 .description > p {
+    color: #48556A;
+}
+
+/* #grid1 .quotation {
+    position: relative;
+    padding-left: 80%;
+    z-index: 1;
+}
+
+#grid1 > h1, #grid1 .introduction {
+    position: relative;
+    z-index: 2;
+} */
